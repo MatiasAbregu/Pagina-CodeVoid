@@ -1,0 +1,106 @@
+.serviceContainer {
+    width: 30%;
+    margin-top: 5%;
+    position: relative;
+}
+
+.topRocket {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -40px;
+    border-left: 250px solid transparent;
+    border-right: 250px solid transparent;
+    border-bottom: 80px solid #9f0000;
+}
+
+.topRocket::after {
+    position: absolute;
+    border-bottom: 40px solid #555;
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    bottom: -14px;
+    right: 60px;
+    height: 0;
+    width: 100px;
+    transform: rotateZ(180deg);
+}
+
+.boosterOut {
+    opacity: 0;
+    background-color: rgb(255, 97, 61);
+    position: absolute;
+    top: 93%;
+    left: 40%;
+    height: 100px;
+    width: 100px;
+    border-radius: 0 50% 50% 50%;
+    transform: rotate(225deg);
+    box-sizing: border-box;
+    transition: opacity 1.5s ease;
+    pointer-events: none;
+}
+
+.boosterIn {
+    background-color: rgb(255, 194, 108);
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    height: 80px;
+    width: 80px;
+    border-radius: 0 50% 50% 50%;
+    transform: rotate(360deg);
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.serviceArticle {
+    height: 50px;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    transition: height 1s ease;
+    margin: 5% 0;
+    font-family: 'Space Mono', sans-serif;
+    background-color: rgb(103, 103, 103);
+    position: relative;
+    border-radius: 20px;
+}
+
+.serviceArticle h3 {
+    margin-top: 12px;
+}
+
+.serviceArticle p {
+    margin: 0 10%;
+}
+
+.serviceArticle ul {
+    text-align: start;
+}
+
+.serviceArticle:hover {
+    z-index: 1;
+}
+
+.serviceArticle:hover ~ .bottomRocket {
+    z-index: 1;
+}
+
+.serviceArticle:hover ~ .boosterOut{
+    z-index: 1;
+    opacity: 1;
+    animation: turbo 2s linear infinite;
+}
+
+@keyframes turbo {
+    0% {
+        transform: scale(0.5) rotate(225deg);
+    }
+    50% {
+        transform: scale(1) rotate(225deg);
+    }
+    100% {
+        transform: scale(0.5) rotate(225deg);
+    }
+}

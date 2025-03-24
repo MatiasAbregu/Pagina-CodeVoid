@@ -1,42 +1,205 @@
+/* Pantalla Carga */
+.pantallaCarga {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    top: 0;
+    z-index: 3;
+}
+
+.circlePurple {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #441650;
+    border-radius: 100%;
+    top: 40%;
+    right: 47%;
+    transition: width 2s ease, height 2s ease, filter 2s ease;
+}
+
+.circlePurple:hover {
+    width: 300px;
+    height: 300px;
+    filter: drop-shadow(0 0 40px #a948c1);
+}
+
+/* Núcleo */
+body {
+    margin: 0;
+    padding: 0;
+    /* height: 700vh; */
+    animation: backgroundAnimation 1.5s infinite normal;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.titulos {
+    text-align: center;
+    color: white;
+    font-family: "Chakra Petch", sans-serif;
+    user-select: none;
+    animation: 3s imageShadow linear infinite;
+    font-size: 50px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Sección: Presentación */
+#presentacion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Chakra Petch", sans-serif;
+    user-select: none;
+    position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.CartelSinFondo {
+    margin-top: 8%;
+    width: 40%;
+    animation: 3s imageShadow linear infinite;
 }
 
-.card {
-  padding: 2em;
+#presentacion h2 {
+    padding: 0;
+    text-align: center;
+    font-size: 50px;
+    animation: 3s imageShadow linear infinite;
 }
 
-.read-the-docs {
-  color: #888;
+/* Sección: Servicios */
+#servicios {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35%;
+    color: white;
+}
+
+#serviciosArticle {
+    width: 90%;
+    margin: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/*Sección: Nuestro equipo*/
+#nuestro-equipo{
+    margin-top: 35%;
+}
+
+#equipoArticle {
+    display: flex;
+}
+
+/*Sección: Nuestros proyectos*/
+#nuestros-proyectos {
+    margin-top: 35%;
+    width: 100%;
+}
+
+/*Sección: Redes*/
+#redes-sociales{
+    margin-top: 25%;
+}
+
+#redesArticle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 5%;
+}
+
+.asteroidvisual{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    animation: spin 4s linear infinite;
+}
+
+.asteroidvisual img{
+    width: 70%;
+}
+
+footer{
+    margin-top: 5%;
+}
+
+footer h3{
+    color: white;
+    text-align: center;
+    animation: 3s imageShadow linear infinite;
+    font-family: "Chakra Petch", sans-serif;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background: radial-gradient(circle, #000, 19%, #441650, 35%, #000);
+    }
+
+    10% {
+        background: radial-gradient(circle, #000, 22%, #441650, 35%, #000);
+    }
+
+    20% {
+        background: radial-gradient(circle, #000, 25%, #441650, 35%, #000);
+    }
+
+    30% {
+        background: radial-gradient(circle, #000, 28%, #441650, 35%, #000);
+    }
+
+    40% {
+        background: radial-gradient(circle, #000, 31%, #441650, 35%, #000);
+    }
+
+    50% {
+        background: radial-gradient(circle, #000, 34%, #441650, 35%, #000);
+    }
+
+    60% {
+        background: radial-gradient(circle, #000, 31%, #441650, 35%, #000);
+    }
+
+    70% {
+        background: radial-gradient(circle, #000, 28%, #441650, 35%, #000);
+    }
+
+    80% {
+        background: radial-gradient(circle, #000, 25%, #441650, 35%, #000);
+    }
+
+    90% {
+        background: radial-gradient(circle, #000, 22%, #441650, 35%, #000);
+    }
+
+    100% {
+        background: radial-gradient(circle, #000, 19%, #441650, 35%, #000);
+    }
+}
+
+@keyframes imageShadow {
+    0% {
+        filter: drop-shadow(0px 0px 5px white);
+    }
+    50% {
+        filter: drop-shadow(0px 0px 14px white);
+    }
+    100% {
+        filter: drop-shadow(0px 0px 5px white);
+    }
+}    
+
+  @keyframes spin {
+    0%   { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}   
 }
