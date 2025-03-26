@@ -148,11 +148,11 @@
     }
     
     .topRocket {
-        top: -40px;
-        right: 15px;
-        border-left: 150px solid transparent;
-        border-right: 150px solid transparent;
-        border-bottom: 60px solid #9f0000;
+        top: -20px;
+        right: 13%;
+        border-left: 35vw solid transparent;
+        border-right: 32vw solid transparent;
+        border-bottom: 12.5vw solid #9f0000;
     }
 
     .boosterOut {
@@ -191,11 +191,11 @@
     }
     
     .topRocket {
-        top: -40px;
-        right: 40px;
-        border-left: 150px solid transparent;
-        border-right: 150px solid transparent;
-        border-bottom: 60px solid #9f0000;
+        top: -30px;
+        right: 13%;
+        border-left: 35vw solid transparent;
+        border-right: 32vw solid transparent;
+        border-bottom: 12.5vw solid #9f0000;
     }
 
     .boosterOut {
@@ -234,7 +234,7 @@
     }
     
     .topRocket {
-        top: -45px;
+        top: -40px;
         right: 13%;
         border-left: 35vw solid transparent;
         border-right: 32vw solid transparent;
