@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './App.css'
 import { CardPresentation } from './components/CardPresentation';
 import { Service } from './components/Service';
 import { Carousel } from './components/Carousel';
 import { Asteroid } from './components/Asteroid';
+import { LoadingScreen } from './components/LoadingScreen';
 
 import Cartel from './img/CartelSinFondo.png';
 import FotoMatias from './img/FotoMatias.jpg';
@@ -20,11 +21,23 @@ import Facebook from './img/Facebook.png';
 import TikTok from './img/TikTok.png';
 
 function App() {
+  const [loadScreen, setLoadScreen] = useState(<LoadingScreen />);
+
+  setTimeout(() => {
+    setLoadScreen(<></>);
+    document.documentElement.style.overflow = "auto";
+  }, 8000);
+
+  useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual"; // Evita recordar el scroll
+    }
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
-      <div className='pantallaCarga'>
-        <span className='circlePurple'></span>
-      </div>
+      {loadScreen}
       <section id='presentacion'>
         <img src={Cartel} className='CartelSinFondo' />
         <h2>"Programar para resolver, innovar para avanzar"</h2>
@@ -72,9 +85,9 @@ function App() {
             ]} />
           <Service
             title={"Creación de logo"}
-            desc={"Creación, dibujo y coloreo de logos completamente personalizados por parte nuestra como del cliente. Incluido gratuitamente en todos los productos mencionados anteriormente excepto en Creación de Base de Datos Relaciones como no Relacionales. Se puede pedir aparte."} 
+            desc={"Creación, dibujo y coloreo de logos completamente personalizados por parte nuestra como del cliente. Incluido gratuitamente en todos los productos mencionados anteriormente excepto en Creación de Base de Datos Relaciones como no Relacionales. Se puede pedir aparte."}
             caract={[
-              "Logo customizable.", "Mejor calidad al demandarlo como producto aparte.","El logo puede ser a creación de una inspiración/imagen suya o, si lo prefiere, a criterio nuestro."
+              "Logo customizable.", "Mejor calidad al demandarlo como producto aparte.", "El logo puede ser a creación de una inspiración/imagen suya o, si lo prefiere, a criterio nuestro."
             ]} />
         </article>
       </section>
@@ -88,10 +101,10 @@ function App() {
       <section id='nuestros-proyectos'>
         <h1 className='titulos'>Proyectos</h1>
         <Carousel datos={[
-          [GestionTurismo, "Gestión Turismo", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio magni esse aspernatur hic, sunt at fugiat voluptatibus autem. Est obcaecati nihil saepe laboriosam similique quae! Voluptates quasi, libero doloribus ad reiciendis blanditiis id iusto optio, debitis accusamus, praesentium non autem molestiae. Dolor ea necessitatibus, eum impedit doloremque recusandae voluptate vitae?"],
-          [ProyectoISPT, "Proyecto ISTP", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio magni esse aspernatur hic, sunt at fugiat voluptatibus autem. Est obcaecati nihil saepe laboriosam similique quae! Voluptates quasi, libero doloribus ad reiciendis blanditiis id iusto optio, debitis accusamus, praesentium non autem molestiae. Dolor ea necessitatibus, eum impedit doloremque recusandae voluptate vitae?"],
-          [ProyectoDentalis, "Historias clinicas Dentalis", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio magni esse aspernatur hic, sunt at fugiat voluptatibus autem. Est obcaecati nihil saepe laboriosam similique quae! Voluptates quasi, libero doloribus ad reiciendis blanditiis id iusto optio, debitis accusamus, praesentium non autem molestiae. Dolor ea necessitatibus, eum impedit doloremque recusandae voluptate vitae?"],
-          [TuruWan, "TuruWan", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio magni esse aspernatur hic, sunt at fugiat voluptatibus autem. Est obcaecati nihil saepe laboriosam similique quae! Voluptates quasi, libero doloribus ad reiciendis blanditiis id iusto optio, debitis accusamus, praesentium non autem molestiae. Dolor ea necessitatibus, eum impedit doloremque recusandae voluptate vitae?"]]} />
+          [GestionTurismo, "Gestión Turismo", "Página web que se hizo con el fin de participar en un concurso, en la cual se buscaba simular una web de gestión de una empresa de turismo."],
+          [ProyectoISPT, "Proyecto ISPT", "Programa de gestión académica y administrativa para el Intituto Superior del Profesorado Tecnológico. Diseñado para optimizar y agilizar procesos que antes se llevaban acabo en papel, permitiendo a estudiantes y al personal tener una experiencia más eficiente y positiva."],
+          [ProyectoDentalis, "Historias clinicas Dentalis", "Programa de gestión de historias clinicas de un consultorio odontológico. Enfocado en reemplazar el uso de lápiz y papel, ofrece un registro ágil y fácil que brinda optimización al momento de trabajar."],
+          [TuruWan, "TuruWan", "Programa creado a medida para un negocio de Salta en dónde el cliente solicitaba un software de gestión acerca de los clientes y productos que gestionaba el mismo negocio, permitiendo al propietario y a sus empleados llevar una mejor organización del mismo."]]} />
       </section>
       <section id='redes-sociales'>
         <h1 className='titulos'>Redes Sociales</h1>

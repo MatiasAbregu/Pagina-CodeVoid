@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import '../styles/Service.css';
 
 export const Service = ({ title, desc, caract }) => {
-    const[height, setHeight] = useState('50px');
+    const[height, setHeight] = useState('');
     const articleRef = useRef(null);
 
     const mouseEnter = () => {
@@ -11,7 +11,7 @@ export const Service = ({ title, desc, caract }) => {
     }
 
     const mouseLeave = () => {
-        setHeight('50px');
+        setHeight('');
     }
 
     return (

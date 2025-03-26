@@ -1,0 +1,90 @@
+.pantallaCarga {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    top: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 2s ease;
+    overflow: hidden;
+}
+
+.pantallaCarga canvas {
+    position: "absolute";
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 6s ease;
+}
+
+.circlePurple {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #441650;
+    border-radius: 100%;
+    transition: width 5.5s ease, height 5.5s ease, box-shadow 7s ease;
+    position: absolute;
+    z-index: 3;
+}
+
+.circlePurple::after {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 50%;
+    top: 25%;
+    right: -25%;
+    border: 3px solid #441650;
+    border-radius: 100%;
+    transform: skewX(30deg);
+    animation: girar 4s infinite;
+    transition: border 3s ease;
+}
+
+.circlePurple.hover {
+    width: 100%;
+    height: 100vw;
+    box-shadow: 0 0 100px 10px #ffffff;
+}
+
+.circlePurple.hover::after{
+    border: 20px solid #441650;
+    animation: desvanecer 4s linear normal, girar 3s infinite;
+    opacity: 0;
+}
+
+.circlePurple.hover ~ canvas {
+    opacity: 1;
+}
+
+.pantallaCarga.finish {
+    opacity: 0;
+}
+
+@keyframes girar {
+    0% {
+        transform: perspective(300px) skewX(30deg) rotateX(160deg);
+    }
+
+    50% {
+        transform: perspective(800px) skewX(60deg) rotateX(-60deg);
+    }
+
+    100% {
+        transform: perspective(300px) skewX(30deg) rotateX(160deg);
+    }
+}
+
+@keyframes desvanecer {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

@@ -21,7 +21,7 @@ div.carousel {
     margin-top: 8%;
 }
 
-.flechas:hover{
+.flechas:hover {
     cursor: pointer;
 }
 
@@ -37,4 +37,65 @@ div.carousel {
     display: flex;
     overflow: hidden;
     width: 100%;
+}
+
+@media screen and (max-width: 375px) {
+    div.carousel {
+        height: 700px;
+    }
+
+    .flechas {
+        font-size: 38px;
+        height: 50px;
+        width: 20%;
+        margin-top: 50%;
+        z-index: 20;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 425px) {
+    div.carousel {
+        height: 700px;
+        padding: 0;
+    }
+
+    .flechas {
+        font-size: 44px;
+        height: 60px;
+        width: 20%;
+        margin-top: 40%;
+        z-index: 20;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    div.carousel {
+        height: 100vh;
+        padding: 0;
+    }
+
+    .flechas {
+        font-size: 7vw;
+        height: 10vw;
+        width: 15%;
+        margin-top: 30%;
+        z-index: 20;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .flechas {
+        font-size: 7vw;
+        height: 10vw;
+        width: 12%;
+        margin-top: 14%;
+        z-index: 20;
+    }
+}
+
+@media screen and (min-width: 1920px) { 
+    div.carousel {
+        height: 45vh;
+        padding-top: 50px;
+    }
 }

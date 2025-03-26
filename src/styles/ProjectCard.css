@@ -35,18 +35,6 @@
     animation: 1.8s show normal linear;
 }
 
-@keyframes show {
-    0%{
-        opacity: 0;
-    }
-    75%{
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 .projectCard.next img,
 .projectCard.hidden img,
 .projectCard.prev img {
@@ -91,4 +79,156 @@
     color: white;
     width: 70%;
     font-family: 'Space Mono', sans-serif;
+}
+
+@keyframes show {
+    0%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .projectCard {
+        flex-wrap: wrap;
+        width: 90%;
+        right: 0px;
+        margin-top: 20%;
+    }
+    
+    /* Movimiento para cuando gira para la derecha */
+    .projectCard.prev.right {
+        right: 40%;
+    }
+    
+    .projectCard.next.right {
+        right: -70%;
+    }
+    
+    /* Movimiento para cuando gira a la izquierda */
+    .projectCard.prev.left {
+        right: -70%;
+        z-index: 3;
+    }
+    
+    .projectCard.next.left {
+        right: 40%;
+    }
+    
+    .projectCard.next img,
+    .projectCard.hidden img,
+    .projectCard.prev img {
+        width: 50%;
+    }
+
+    .projectCard.active {
+        z-index: 4;
+    }
+    
+    .projectCard img {
+        width: 85%;
+    }
+    
+    .projectCard img:hover {
+        width: 85%;
+        height: 180px;
+        transform: none;
+    }
+    
+    .projectCard div {
+        width: 90%;
+    }
+    
+    .projectCard div p {
+        color: white;
+        width: 90%;
+        font-family: 'Space Mono', sans-serif;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .projectCard {
+        flex-wrap: wrap;
+        width: 90%;
+        right: 0px;
+        margin-top: 20%;
+    }
+    
+    /* Movimiento para cuando gira para la derecha */
+    .projectCard.prev.right {
+        right: 40%;
+    }
+    
+    .projectCard.next.right {
+        right: -70%;
+    }
+    
+    /* Movimiento para cuando gira a la izquierda */
+    .projectCard.prev.left {
+        right: -70%;
+        z-index: 3;
+    }
+    
+    .projectCard.next.left {
+        right: 40%;
+    }
+    
+    .projectCard.next img,
+    .projectCard.hidden img,
+    .projectCard.prev img {
+        width: 50%;
+    }
+
+    .projectCard.active {
+        z-index: 4;
+        right: -3%;
+    }
+
+    .projectCard:hover{
+        right: 3%;
+    }
+    
+    .projectCard:hover div{ 
+        margin-right: 2%;
+    } 
+
+    .projectCard img {
+        width: 85%;
+    }
+    
+    .projectCard img:hover {
+        width: 85%;
+        height: 40vw;
+        transform: none;
+    }
+    
+    .projectCard div {
+        width: 100%;
+        margin-right: 15%;
+    }
+    
+    .projectCard div p {
+        color: white;
+        right: -3%;
+        width: 100%;
+        font-size: 3vw;
+        font-family: 'Space Mono', sans-serif;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .projectCard img {
+        width: 50%;
+
+    }
+    
+    .projectCard img:hover {
+        width: 48%;
+        transform: none;
+    }
 }

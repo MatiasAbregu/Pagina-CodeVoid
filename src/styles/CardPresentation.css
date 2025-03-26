@@ -26,16 +26,16 @@
     width: 25%;
 }
 
-.containerPresentation a:nth-child(1) .asteroid{
-    left: 45px;
-    top: 75%;
+.containerPresentation a:nth-child(1) .asteroid {
+    left: 35px;
+    top: 70%;
     animation: 6s rotationLeft linear infinite;
     z-index: 1;
 }
 
-.containerPresentation a:nth-child(3) .asteroid{
+.containerPresentation a:nth-child(3) .asteroid {
     right: -18px;
-    top: 49%;
+    top: 48%;
     animation: 6s rotationRight linear infinite;
     z-index: 1;
 }
@@ -47,11 +47,11 @@
     color: white;
 }
 
-.cardPresentation .circle1{
+.cardPresentation .circle1 {
     position: absolute;
-    top: 30%;
+    top: 34%;
     height: 180px;
-    width: 520px;
+    width: 40vw;
     border: 8px solid white;
     border-radius: 100%;
     border-top: none;
@@ -59,50 +59,271 @@
     clip-path: polygon(0 15%, 80% 7%, 100% 20%, 100% 80%, 100% 100%, 0 100%);
 }
 
-.cardPresentation .circle2{
+.cardPresentation .circle2 {
     position: absolute;
-    top: 40%;
+    top: 44%;
     height: 120px;
-    width: 520px;
+    width: 39vw;
     border: 8px solid white;
     border-radius: 100%;
     border-top: none;
     clip-path: polygon(0 15%, 80% 13%, 100% 20%, 100% 80%, 100% 100%, 0 100%);
-} 
+}
 
 @keyframes rotationRight {
-    100%{
+    100% {
         transform: rotateZ(360deg);
     }
 }
 
 @keyframes rotationLeft {
-    100%{
+    100% {
         transform: rotateZ(-360deg);
     }
 }
 
-@media screen and (min-width: 1870px) {
-    .cardPresentation p {
-        margin-top: 60px;
-    }
-    
-    .containerPresentation a:nth-child(1) .asteroid{
-        left: 38px;
-        top: 64%;
-    }
-    
-    .containerPresentation a:nth-child(3) .asteroid{
-        right: -18px;
-        top: 42%;
+@media screen and (max-width: 320px) {
+    .cardPresentation {
+        width: 100%;
     }
 
-    .cardPresentation .circle1{
-        width: 712px;
-        clip-path: polygon(0 17%, 80% 7%, 100% 20%, 110% 80%, 100% 100%, 0 110%);
+    .imgProfile {
+        margin-top: 10%;
+        width: 80%;
+    }
+
+    .containerPresentation a .asteroid {
+        width: 30%;
+    }
+
+    .containerPresentation a:nth-child(1) .asteroid {
+        left: -3%;
+        top: 62%;
+    }
+
+    .cardPresentation p {
+        margin-top: 40px;
+    }
+
+    .cardPresentation .circle1 {
+        width: 290px;
+        clip-path: polygon(0 20%, 80% 7%, 100% 20%, 100% 80%, 100% 100%, 0 100%);
+    }
+
+    .cardPresentation .circle2 {
+        width: 305px;
+        clip-path: polygon(0 15%, 80% 14%, 100% 20%, 100% 80%, 100% 100%, 0 100%);
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 375px) {
+    .cardPresentation {
+        width: 100%;
+    }
+
+    .imgProfile {
+        margin-top: 10%;
+        width: 80%;
+    }
+
+    .containerPresentation a .asteroid {
+        width: 30%;
+    }
+
+    .containerPresentation a:nth-child(1) .asteroid {
+        left: -3%;
+        top: 58%;
+    }
+
+    .containerPresentation a:nth-child(3) .asteroid {
+        right: -18px;
+        top: 42%;
+        animation: 6s rotationRight linear infinite;
+        z-index: 1;
+    }
+
+    .cardPresentation p {
+        margin-top: 40px;
+    }
+
+    .cardPresentation .circle1 {
+        width: 330px;
+        clip-path: polygon(0 20%, 80% 7%, 100% 20%, 100% 80%, 100% 100%, 0 100%);
+    }
+
+    .cardPresentation .circle2 {
+        width: 360px;
+        clip-path: polygon(0 15%, 80% 14%, 100% 20%, 100% 80%, 100% 100%, 0 100%);
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 425px) {
+    .cardPresentation {
+        width: 100%;
+    }
+
+    .imgProfile {
+        margin-top: 10%;
+        width: 80%;
+    }
+
+    .containerPresentation a .asteroid {
+        width: 30%;
+    }
+
+    .containerPresentation a:nth-child(1) .asteroid {
+        left: -5%;
+        top: 50%;
+    }
+
+    .containerPresentation a:nth-child(3) .asteroid {
+        right: -18px;
+        top: 38%;
+        animation: 6s rotationRight linear infinite;
+        z-index: 1;
+    }
+
+    .cardPresentation p {
+        margin-top: 40px;
+    }
+
+    .cardPresentation .circle1 {
+        width: 370px;
+        clip-path: polygon(0 20%, 80% 7%, 100% 20%, 100% 80%, 100% 100%, 0 100%);
+    }
+
+    .cardPresentation .circle2 {
+        width: 410px;
+        clip-path: polygon(0 15%, 80% 14%, 100% 20%, 100% 80%, 100% 100%, 0 100%);
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .cardPresentation {
+        width: 100%;
+    }
+
+    .imgProfile {
+        margin-top: 10%;
+        width: 80%;
+    }
+
+    .containerPresentation a .asteroid {
+        width: 25%;
+    }
+
+    .containerPresentation a:nth-child(1) .asteroid {
+        left: -5%;
+        top: 50%;
+    }
+
+    .containerPresentation a:nth-child(3) .asteroid {
+        right: -35px;
+        top: 28%;
+        animation: 6s rotationRight linear infinite;
+        z-index: 1;
+    }
+
+    .cardPresentation p {
+        margin-top: 40px;
+        font-size: 3.5vw;
+    }
+
+    .cardPresentation .circle1 {
+        width: 95vw;
+        top: 38%;
+        clip-path: polygon(0 20%, 85% 2%, 100% 20%, 100% 80%, 100% 100%, 0 100%);
+    }
+
+    .cardPresentation .circle2 {
+        width: 95vw;
+        top: 50%;
+        clip-path: polygon(0 15%, 80% 14%, 100% 20%, 100% 80%, 100% 100%, 0 100%);
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .containerPresentation a .asteroid {
+        width: 25%;
+    }
+
+    .containerPresentation a:nth-child(1) .asteroid {
+        left: -5%;
+        top: 60%;
+    }
+
+    .containerPresentation a:nth-child(3) .asteroid {
+        right: -35px;
+        top: 31%;
+        animation: 6s rotationRight linear infinite;
+        z-index: 1;
+    }
+
+    .cardPresentation .circle1 {
+        width: 45vw;
+        top: 24%;
+        clip-path: polygon(0 20%, 85% 2%, 100% 20%, 100% 80%, 100% 100%, 0 100%);
+    }
+
+    .cardPresentation .circle2 {
+        width: 45vw;
+        top: 45%;
+        clip-path: polygon(0 11%, 80% 14%, 100% 20%, 100% 80%, 100% 100%, 0 100%);
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) { 
+    .containerPresentation a .asteroid {
+        width: 25%;
+    }
+
+    .containerPresentation a:nth-child(1) .asteroid {
+        left: -4%;
+        top: 50%;
+    }
+
+    .containerPresentation a:nth-child(3) .asteroid {
+        right: -35px;
+        top: 18%;
+        animation: 6s rotationRight linear infinite;
+        z-index: 1;
+    }
+
+    .cardPresentation .circle1 {
+        width: 41vw;
+        top: 24%;
+        clip-path: polygon(0 20%, 85% 2%, 100% 20%, 100% 80%, 100% 100%, 0 100%);
+    }
+
+    .cardPresentation .circle2 {
+        width: 43vw;
+        top: 45%;
+        clip-path: polygon(0 11%, 80% 14%, 100% 20%, 100% 80%, 100% 100%, 0 100%);
+    }
+}
+
+@media screen and (min-width: 1920px) { 
+    .containerPresentation a:nth-child(1) .asteroid {
+        left: 35px;
+        top: 70%;
     }
     
-    .cardPresentation .circle2{
-        width: 720px;
-    } 
+    .containerPresentation a:nth-child(3) .asteroid {
+        right: -18px;
+        top: 48%;
+    }
+
+    .cardPresentation .circle1 {
+        top: 44%;
+        height: 180px;
+        width: 38vw;
+        clip-path: polygon(0 15%, 80% 7%, 100% 20%, 100% 80%, 100% 100%, 0 100%);
+    }
+    
+    .cardPresentation .circle2 {
+        top: 52%;
+        height: 120px;
+        width: 36vw;
+        clip-path: polygon(0 15%, 80% 13%, 100% 20%, 100% 80%, 100% 100%, 0 100%);
+    }
 }

@@ -8,22 +8,11 @@
     position: absolute;
     width: 0;
     height: 0;
-    top: -40px;
-    border-left: 250px solid transparent;
-    border-right: 250px solid transparent;
-    border-bottom: 80px solid #9f0000;
-}
-
-.topRocket::after {
-    position: absolute;
-    border-bottom: 40px solid #555;
-    border-left: 140px solid transparent;
-    border-right: 140px solid transparent;
-    bottom: -14px;
-    right: 60px;
-    height: 0;
-    width: 100px;
-    transform: rotateZ(180deg);
+    top: -50px;
+    right: 2%;
+    border-left: 13vw solid transparent;
+    border-right: 13vw solid transparent;
+    border-bottom: 5vw solid #9f0000;
 }
 
 .boosterOut {
@@ -102,5 +91,232 @@
     }
     100% {
         transform: scale(0.5) rotate(225deg);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .serviceContainer {
+        width: 100%;
+        margin-top: 10%;
+    }
+    
+    .topRocket {
+        top: -38px;
+        right: 8px;
+        border-left: 135px solid transparent;
+        border-right: 135px solid transparent;
+        border-bottom: 60px solid #9f0000;
+    }
+
+    .serviceArticle {
+        height: 70px;
+    }
+      
+    .boosterOut {
+        top: 97%;
+        left: 35%;
+        height: 80px;
+        width: 80px;
+    }
+    
+    .boosterIn {
+        height: 60px;
+        width: 60px;
+    }
+    
+    .serviceArticle h3 {
+        margin-top: 9px;
+    }
+
+    .serviceContainer:nth-of-type(2) h3{
+        margin-top: 19px;
+    }
+    
+    .serviceContainer:nth-of-type(4) h3{
+        margin-top: 20px;
+    }
+
+    .serviceContainer:nth-of-type(5) h3{
+        margin-top: 22px;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 375px) {
+    .serviceContainer {
+        width: 100%;
+        margin-top: 10%;
+    }
+    
+    .topRocket {
+        top: -40px;
+        right: 15px;
+        border-left: 150px solid transparent;
+        border-right: 150px solid transparent;
+        border-bottom: 60px solid #9f0000;
+    }
+
+    .boosterOut {
+        top: 97%;
+        left: 37%;
+        height: 80px;
+        width: 80px;
+    }
+    
+    .boosterIn {
+        height: 60px;
+        width: 60px;
+    }
+    
+    .serviceArticle h3 {
+        margin-top: 9px;
+    }
+
+    .serviceContainer:nth-of-type(2) h3{
+        margin-top: 10px;
+    }
+    
+    .serviceContainer:nth-of-type(4) h3{
+        margin-top: 10px;
+    }
+
+    .serviceContainer:nth-of-type(5) h3{
+        margin-top: 11px;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 425px) {
+    .serviceContainer {
+        width: 100%;
+        margin-top: 10%;
+    }
+    
+    .topRocket {
+        top: -40px;
+        right: 40px;
+        border-left: 150px solid transparent;
+        border-right: 150px solid transparent;
+        border-bottom: 60px solid #9f0000;
+    }
+
+    .boosterOut {
+        top: 97%;
+        left: 39%;
+        height: 80px;
+        width: 80px;
+    }
+    
+    .boosterIn {
+        height: 60px;
+        width: 60px;
+    }
+    
+    .serviceArticle h3 {
+        margin-top: 9px;
+    }
+
+    .serviceContainer:nth-of-type(2) h3{
+        margin-top: 10px;
+    }
+    
+    .serviceContainer:nth-of-type(4) h3{
+        margin-top: 10px;
+    }
+
+    .serviceContainer:nth-of-type(5) h3{
+        margin-top: 11px;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .serviceContainer {
+        width: 100%;
+        margin-top: 10%;
+    }
+    
+    .topRocket {
+        top: -45px;
+        right: 13%;
+        border-left: 35vw solid transparent;
+        border-right: 32vw solid transparent;
+        border-bottom: 12.5vw solid #9f0000;
+    }
+
+    .boosterOut {
+        top: 97%;
+        left: 42.5%;
+        height: 12.5vw;
+        width: 12.5vw;
+    }
+    
+    .boosterIn {
+        height: 10vw;
+        width: 10vw;
+    }
+    
+    .serviceArticle h3 {
+        margin-top: 9px;
+        font-size: 3vw;
+    }
+
+    .serviceArticle p, .serviceArticle ul {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .serviceContainer {
+        width: 48%;
+        margin-top: 10%;
+    }
+    
+    .topRocket {
+        top: -45px;
+        right: 4%;
+        border-left: 20vw solid transparent;
+        border-right: 20vw solid transparent;
+        border-bottom: 8vw solid #9f0000;
+    }
+
+    .boosterOut {
+        top: 97%;
+        left: 36%;
+        height: 12.5vw;
+        width: 12.5vw;
+    }
+    
+    .boosterIn {
+        height: 10vw;
+        width: 10vw;
+    }
+    
+    .serviceArticle h3 {
+        margin-top: 9px;
+        font-size: 2.2vw;
+    }
+
+    .serviceArticle p, .serviceArticle ul {
+        font-size: 1.8vw;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) { 
+    .topRocket {
+        top: -42px;
+        right: 6%;
+        border-left: 12vw solid transparent;
+        border-right: 12vw solid transparent;
+        border-bottom: 5vw solid #9f0000;
+    }
+
+    .boosterOut {
+        top: 97%;
+        left: 34%;
+        height: 8vw;
+        width: 8vw;
+    }
+    
+    .boosterIn {
+        height: 6vw;
+        width: 6vw;
     }
 }
