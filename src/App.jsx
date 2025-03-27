@@ -110,7 +110,7 @@ function App() {
         <h1 className='titulos'>Redes Sociales</h1>
         <article id='redesArticle'>
           <Asteroid img={Instagram}
-            link={"https://www.instagram.com/codevoidstudio"} />
+            link={"https://www.instagram.com/code_void_studio/"} />
           <Asteroid img={Gmail}
             link={"mailto:codevoidstudio@gmail.com"} />
           <Asteroid img={Facebook}
