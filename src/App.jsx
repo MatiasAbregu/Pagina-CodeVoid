@@ -40,7 +40,7 @@ function App() {
       {loadScreen}
       <section id='presentacion'>
         <img src={Cartel} className='CartelSinFondo' />
-        <h2>"Programar para resolver, innovar para avanzar"</h2>
+        <h2>"Software con identidad"</h2>
       </section>
       <section id='servicios'>
         <h1 className='titulos'>Servicios</h1>
