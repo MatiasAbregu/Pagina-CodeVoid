@@ -14,6 +14,7 @@ import WA from './img/Whatsapp.png';
 import FotoMariano from './img/FotoMariano.jpg';
 import ProyectoISPT from './img/projectsImg/ISPT.png';
 import ProyectoDentalis from './img/projectsImg/Dentalis.png';
+import ProyectoDentalisTI from './img/projectsImg/DentalisTI.png';
 import GestionTurismo from './img/projectsImg/GestionTurismo.png';
 import TuruWan from './img/projectsImg/TuruWan.png';
 import Instagram from './img/Instagram.png';
@@ -117,7 +118,8 @@ function App() {
         <Carousel datos={[
           [GestionTurismo, "Gestión Turismo", "Página web que se hizo con el fin de participar en un concurso, en la cual se buscaba simular una web de gestión de una empresa de turismo."],
           [ProyectoISPT, "Proyecto ISPT", "Programa de gestión académica y administrativa para el Intituto Superior del Profesorado Tecnológico. Diseñado para optimizar y agilizar procesos que antes se llevaban acabo en papel, permitiendo a estudiantes y al personal tener una experiencia más eficiente y positiva."],
-          [ProyectoDentalis, "Historias clinicas Dentalis", "Programa de gestión de historias clinicas de un consultorio odontológico. Enfocado en reemplazar el uso de lápiz y papel, ofrece un registro ágil y fácil que brinda optimización al momento de trabajar."],
+          [ProyectoDentalis, "Historias clínicas Dentalis", "Programa de gestión de historias clínicas de un consultorio odontológico. Enfocado en reemplazar el uso de lápiz y papel, ofrece un registro ágil y fácil que brinda optimización al momento de trabajar."],
+          [ProyectoDentalisTI, "Turnero Dentalis", "Página web centrada en permitir sacar turnos dependiendo del tipo de turno, cada turno cuenta con una duración predeterminada. A las 00:00 se envía un recordatorio a las personas que tienen un turno ese mismo día. Link a la web: https://dentalis.vercel.app"],
           [TuruWan, "TuruWan", "Programa creado a medida para un negocio de Salta en dónde el cliente solicitaba un software de gestión acerca de los clientes y productos que gestionaba el mismo negocio, permitiendo al propietario y a sus empleados llevar una mejor organización del mismo."]]} />
       </motion.section>
       <motion.section id='redes-sociales'
