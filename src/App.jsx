@@ -5,6 +5,7 @@ import { Service } from './components/Service';
 import { Carousel } from './components/Carousel';
 import { Asteroid } from './components/Asteroid';
 import { LoadingScreen } from './components/LoadingScreen';
+import { motion } from 'framer-motion';
 
 import Cartel from './img/CartelSinFondo.png';
 import FotoMatias from './img/FotoMatias.jpg';
@@ -42,7 +43,12 @@ function App() {
         <img src={Cartel} className='CartelSinFondo' />
         <h2>"Software con identidad"</h2>
       </section>
-      <section id='servicios'>
+      <motion.section id='servicios'
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 1 }}
+      >
         <h1 className='titulos'>Servicios</h1>
         <article id='serviciosArticle'>
           <Service
@@ -90,23 +96,35 @@ function App() {
               "Logo customizable.", "Mejor calidad al demandarlo como producto aparte.", "El logo puede ser a creación de una inspiración/imagen suya o, si lo prefiere, a criterio nuestro."
             ]} />
         </article>
-      </section>
-      <section id='nuestro-equipo'>
+      </motion.section>
+      <motion.section id='nuestro-equipo'
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 1 }} >
         <h1 className='titulos'>Equipo</h1>
         <article id='equipoArticle'>
           <CardPresentation img={FotoMatias} desc={"Soy Matías Abregú, programador de 21 años con experiencia en desarrollo de software desde los 14 años. Me encargo de liderar y estructurar cada proyecto de software de una manera prolija y eficiente para brindar la mejor experiencia al cliente."} imgAsteroid={GH} imgAsteroid2={WA} link1={"https://github.com/MatiasAbregu"} link2={"https://wa.me/543512753590"} />
           <CardPresentation img={FotoMariano} desc={"Soy Mariano Hernández, programador de 24 años con 1 año de experiencia en desarrollo de software. Soy el Project Manager, encargado de llevar a cabo nuestro talento hacia nuestros clientes y brindar la mejor atención en el menor tiempo posible."} imgAsteroid={GH} imgAsteroid2={WA} link1={"https://github.com/master16mh"} link2={"https://wa.me/543518690277"} />
         </article>
-      </section>
-      <section id='nuestros-proyectos'>
+      </motion.section>
+      <motion.section id='nuestros-proyectos'
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: false }}
+        transition={{ type:"spring", bounce: 0.5, duration: 1.5 }} >
         <h1 className='titulos'>Proyectos</h1>
         <Carousel datos={[
           [GestionTurismo, "Gestión Turismo", "Página web que se hizo con el fin de participar en un concurso, en la cual se buscaba simular una web de gestión de una empresa de turismo."],
           [ProyectoISPT, "Proyecto ISPT", "Programa de gestión académica y administrativa para el Intituto Superior del Profesorado Tecnológico. Diseñado para optimizar y agilizar procesos que antes se llevaban acabo en papel, permitiendo a estudiantes y al personal tener una experiencia más eficiente y positiva."],
           [ProyectoDentalis, "Historias clinicas Dentalis", "Programa de gestión de historias clinicas de un consultorio odontológico. Enfocado en reemplazar el uso de lápiz y papel, ofrece un registro ágil y fácil que brinda optimización al momento de trabajar."],
           [TuruWan, "TuruWan", "Programa creado a medida para un negocio de Salta en dónde el cliente solicitaba un software de gestión acerca de los clientes y productos que gestionaba el mismo negocio, permitiendo al propietario y a sus empleados llevar una mejor organización del mismo."]]} />
-      </section>
-      <section id='redes-sociales'>
+      </motion.section>
+      <motion.section id='redes-sociales'
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{ type:"spring", bounce: 0.5, duration: 1 }}>
         <h1 className='titulos'>Redes Sociales</h1>
         <article id='redesArticle'>
           <Asteroid img={Instagram}
@@ -118,7 +136,7 @@ function App() {
           <Asteroid img={TikTok}
             link={"https://www.tiktok.com/@codevoidstudio"} />
         </article>
-      </section>
+      </motion.section>
       <footer>
         <h3>© Derechos reservados a Code Void - 2025</h3>
       </footer>
